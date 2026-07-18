@@ -1,97 +1,121 @@
 # 课程名称
-course_name = "课程中文名称"
+course_name = "信号与系统"
 
 # 仓库类型: normal | multi-project
 repo_type = "normal"
 
 # 课程代码 (用于检索)
-course_code = "CODE1234"
+course_code = "ELEC2018"
 
 # 课程简介
 description = """
-在这里填写课程的简要介绍。
-可以换行。
+信号与系统，讲授连续 / 离散时间信号与系统的时域与变换域分析等经典内容。不同年级、专业下课程性质不同：23 级计信集群为必修考试课、人工智能班为必修考查课；24 级空天集群为必修考试课、人工智能班为限选课；25 级通信专业为必修（专业轨道课）、人工智能班为限选课。
 """
 
 # ===== 章节列表 =====
 [[sections]]
+title = "基本信息"
+
+[[sections.items]]
+content = """
+【成绩构成】：期末考试（闭卷）50% | 智慧树线上学习 30% | 课堂参与（签到 + 智慧树答题）10% | 实验实践 10%
+
+课程性质随年级 / 专业变化（据整理，供参考）：
+
+- 23 级：计信集群必修、考试课；人工智能班必修、考查课
+- 24 级：空天集群必修、考试课；人工智能班限选课
+- 25 级：通信专业必修（专业轨道课）；人工智能班限选课
+"""
+author = { name = "aqua", link = "https://github.com/marine-aqua", date = "2026-07" }
+
+[[sections]]
 title = "考核方式"
 
-# 第一条内容
 [[sections.items]]
 content = """
-• 平时成绩: 30%
-• 期中考试: 30%
-• 期末考试: 40%
-"""
-# author 是可选的
-author = { name = "昵称A", date = "2025-03" }
+本课程采用过程性考核。
 
-# 第二条内容（同一章节下多条）
+- 期末考试（闭卷）：50%。答题卡电子阅卷，请带好 2B 铅笔涂卡；分客观题（选择、填空）与主观题（写步骤解答）；可携带无存储功能的计算器；满分 100 分
+- 智慧树线上学习：30%
+- 课堂参与：10%（签到 + 智慧树答题）
+- 实验实践：10%
+
+课程互动（签到、答题）在小程序「智慧树学习中心」或「知到」App 进行。
+"""
+author = { name = "aqua", link = "https://github.com/marine-aqua", date = "2026-07" }
+
+[[sections]]
+title = "教材与参考书"
+
 [[sections.items]]
 content = """
-• 2024年: 期末 60% + 平时 40%
+**主要教材**
+
+- 郑君里，《信号与系统》（第四版，上、下册），高等教育出版社，2024
+
+**参考书**
+
+- 奥本海姆（Alan V. Oppenheim）等，刘树棠译，《信号与系统》（第二版），电子工业出版社，2012
+- 张晔，《信号与系统》（第 5 版），哈尔滨工业大学出版社，2020
+
+教师课件因版权原因不上传本仓库。
 """
-author = { name = "昵称B", date = "2024-01" }
+author = { name = "aqua", link = "https://github.com/marine-aqua", date = "2026-07" }
 
 [[sections]]
 title = "学习资料"
 
 [[sections.items]]
 content = """
-• 教材: 《书名》
-• 参考资料链接
+- 本仓库：笔记与典型习题精编（`notes/`）；`exams/` 含 2026 春期末回忆卷（与 24 级对答案整理；贡献：McFlurry，ShiningQStar，5555）及 2023 期末答案
 """
+author = { name = "aqua", link = "https://github.com/marine-aqua", date = "2026-07" }
 
-# ===== 教师评价 (新 schema) =====
-# 顺序: lecturers.intro → lecturers.items → lecturers.summary
+[[sections]]
+title = "课程内容"
+
+[[sections.items]]
+content = """
+大致覆盖（按实际授课与笔记整理，供参考）：
+
+- 信号与系统的基本概念
+- 连续时间系统的时域分析
+- 傅里叶变换及其应用
+- 拉普拉斯变换
+- 离散时间系统的时域分析
+- Z 变换
+- 信号流图与系统的状态变量分析
+"""
+author = { name = "aqua", link = "https://github.com/marine-aqua", date = "2026-07" }
+
+[[sections]]
+title = "课程建议"
+
+[[sections.items]]
+content = """
+- 课堂限时习题（约 30 秒～2 分钟）难度不小，建议跟紧课堂节奏，及时消化变换域与时域方法
+- 过程性考核分量重（智慧树线上学习 30% + 课堂参与 10%），平时勿拖欠
+- 期末为闭卷、答题卡阅卷；主观题需写清步骤，复习可对照本仓库笔记、习题精编与回忆卷
+"""
+author = { name = "aqua", link = "https://github.com/marine-aqua", date = "2026-07" }
+
+# ===== 教师评价 =====
 [lecturers]
 
-# 教师简介 (在教师列表之前，可以多条)
 [[lecturers.intro]]
 content = """
-教师团队总体介绍。
-人数: 3人
+本课授课教师包括朱旭、顾术实等（分班情况可能因年级而异）。
 """
-author = { name = "管理员", date = "2025-01" }
-
-[[lecturers.intro]]
-content = """
-研究方向: 机器学习、计算机视觉
-"""
-author = { name = "管理员", date = "2025-01" }
-
-# 教师列表
-[[lecturers.items]]
-name = "教师A"
-
-[[lecturers.items.reviews]]
-content = """
-教师评价内容。
-可以多行。
-"""
-author = { name = "昵称", link = "https://github.com/xxx", date = "2025-03" }
-
-[[lecturers.items.reviews]]
-content = "另一条评价"
-author = { name = "匿名", date = "2025-01" }
+author = { name = "aqua", link = "https://github.com/marine-aqua", date = "2026-07" }
 
 [[lecturers.items]]
-name = "教师B"
+name = "顾术实"
 
 [[lecturers.items.reviews]]
-content = "教师B的评价"
-author = { name = "学生", date = "2024-12" }
-
-# 教师总结 (在教师列表之后，可以多条)
-[[lecturers.summary]]
 content = """
-教师团队总结。
-整体教学水平较高。
+长期教授信号与系统，教学经验很丰富。平时课上的限时习题（约 30 秒～2 分钟）有较大难度。
 """
-author = { name = "管理员", date = "2025-01" }
+author = { name = "aqua", link = "https://github.com/marine-aqua", date = "2026-07" }
 
-[[lecturers.summary]]
-content = """
-建议: 尽早选课，晚了好老师就没了
-"""
+[[lecturers.items]]
+name = "朱旭"

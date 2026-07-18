@@ -1,0 +1,272 @@
+\documentclass[10pt,a4paper]{ctexart}
+
+\usepackage[top=2cm,bottom=2cm,left=2cm,right=2cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+\usepackage{tasks}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{adjustbox}
+
+\settasks{label-width=1.2em}
+
+\newcommand{\fillblank}{\underline{\hspace{1.5cm}}}
+\usetikzlibrary{positioning,arrows.meta,shapes.geometric,calc}
+
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{0pt}
+
+\ctexset{
+  section/format = {\Large\bfseries}
+}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\bfseries 信号与系统\ 期末试卷（回忆版）}
+
+  \vspace{0.4cm}
+  {\large 说明：本卷根据考试回忆整理，具体数值可能与原卷有出入，但考点和题型保持一致。}
+
+  \vspace{0.25cm}
+  {\normalsize
+  来源：与 24 级同学对答案整理\\[2pt]
+  贡献：McFlurry，ShiningQStar，5555}
+\end{center}
+
+\vspace{0.3cm}
+
+% ==================== 一、选择题 ====================
+\section*{一、选择题}
+
+\begin{enumerate}[label=\arabic*.,leftmargin=*]
+
+\item 已知系统的输入 $e(t)$ 与输出 $r(t)$ 满足关系
+  \[
+  r(t)=\int_{t-1}^{t+1} e(\tau)\,\mathrm{d}\tau,
+  \]
+  则该系统具有\fillblank。
+
+  \begin{tasks}(2)
+    \task 线性、时不变、非因果
+    \task 线性、时不变、因果
+    \task 线性、时变、非因果
+    \task 非线性、时不变、非因果
+  \end{tasks}
+
+\item 已知某信号的频谱为
+  \[
+  X(\mathrm{j}\omega)=
+  \begin{cases}
+  1, & 3 < |\omega| < 7,\\[2pt]
+  0, & \text{其他},
+  \end{cases}
+  \]
+  则其傅里叶逆变换 $x(t)=$\fillblank。
+
+  \begin{tasks}(2)
+    \task $\dfrac{\sin 7t-\sin 3t}{\pi t}$
+    \task $\dfrac{\sin 7t+\sin 3t}{\pi t}$
+    \task $\dfrac{\sin 7t-\sin 3t}{t}$
+    \task $\dfrac{\sin 7t-\sin 3t}{2\pi t}$
+  \end{tasks}
+
+\item 已知周期信号 $f(t)$ 的周期 $T=4$，在一个周期 $[-2,\,2]$ 内的波形为：$t\in[-1,0]$ 时由 $0$ 线性上升至 $2$，$t\in[0,1]$ 时由 $2$ 线性下降至 $0$，其余区间为 $0$。则其指数形式傅里叶级数的系数为\fillblank。
+
+  \begin{tasks}(2)
+    \task $F_0=\dfrac12,\quad F_n=\dfrac12\,\mathrm{Sa}^2\!\left(\dfrac{n\pi}{4}\right)$
+    \task $F_0=1,\quad\; F_n=\dfrac12\,\mathrm{Sa}^2\!\left(\dfrac{n\pi}{2}\right)$
+    \task $F_0=\dfrac12,\quad F_n=\dfrac14\,\mathrm{Sa}^2\!\left(\dfrac{n\pi}{4}\right)$
+    \task $F_0=1,\quad\; F_n=\mathrm{Sa}^2\!\left(\dfrac{n\pi}{4}\right)$
+  \end{tasks}
+
+\item 已知象函数
+  \[
+  F(s)=\frac{s^2+2s+3}{(s+1)(s^2+4)},
+  \]
+  则 $f(0_+)$ 和 $f(\infty)$ 分别为\fillblank。
+
+  \begin{tasks}(2)
+    \task $f(0_+)=0,\; f(\infty)=0$
+    \task $f(0_+)=0,\; f(\infty)=\dfrac34$
+    \task $f(0_+)=1,\; f(\infty)=0$
+    \task $f(0_+)=1,\; f(\infty)\text{不存在}$
+  \end{tasks}
+
+\end{enumerate}
+
+% ==================== 二、填空题 ====================
+\section*{二、填空题}
+
+\begin{enumerate}[label=\arabic*.,leftmargin=*]
+
+\item 已知
+  \[
+  F(s)=\frac{2s+3}{(s+2)(s+1)},\qquad \text{收敛域：}-2<\operatorname{Re}(s)<-1,
+  \]
+  则其拉普拉斯逆变换 $f(t)=$\fillblank。
+
+\item 已知两个离散序列（箭头标明 $n=0$ 的位置）：
+  \[
+  x[n]=\{3,\,-2,\,\underset{\uparrow}{1},\,0,\,2\},\qquad
+  h[n]=\{1,\,\underset{\uparrow}{0},\,-1,\,2\},
+  \]
+  则卷积和 $y[n]=x[n]*h[n]=$\fillblank。
+
+\item 某无失真传输系统 $H(\mathrm{j}\omega)=2\mathrm{e}^{-\mathrm{j}3\omega}$，激励 $e(t)=3\sin(2t)$，响应 $r(t)=$\fillblank。
+
+\item 如图所示的RLC串联电路，$R=1\,\Omega$，$L=1\,\mathrm{H}$，$C=\dfrac13\,\mathrm{F}$，输入为 $v_{\mathrm{i}}(t)$，输出为电容电压 $v_{\mathrm{C}}(t)$，则系统函数 $H(s)=\dfrac{V_{\mathrm{C}}(s)}{V_{\mathrm{i}}(s)}=$\fillblank。
+
+\begin{center}
+\begin{circuitikz}[american,scale=0.9]
+  \draw (0,0) to[V, invert, l=$v_{\mathrm{i}}(t)$] (0,3)
+              to[R, l=$1\,\Omega$] (3,3)
+              to[L, l=$1\,\mathrm{H}$] (5,3)
+              to[C, l=$\frac13\,\mathrm{F}$, v=$v_{\mathrm{C}}(t)$] (5,0)
+              -- (0,0);
+\end{circuitikz}
+\end{center}
+
+\item 已知 $X(z)=\dfrac{z}{2(z-0.5)^2}$，收敛域 $|z|>0.5$。设 $y[n]=2^{\,n}\,x[n]$，则 $Y(z)=$\fillblank，收敛域为\fillblank。
+
+\end{enumerate}
+
+% ==================== 三、解答题 ====================
+\section*{三、解答题}
+
+\subsection*{1.}
+
+已知LTI连续时间系统的微分方程为
+\[
+r''(t)+3r'(t)+2r(t)=e'(t)+e(t),
+\]
+激励 $e(t)=\mathrm{e}^{-3t}u(t)$，系统的全响应为
+\[
+r(t)=\bigl(\mathrm{e}^{-t}-\mathrm{e}^{-3t}\bigr)\,u(t).
+\]
+
+\begin{enumerate}[label=(\arabic*),leftmargin=*]
+  \item 指出全响应中的自由响应分量和强迫响应分量；
+  \item 利用冲激函数匹配法，求 $r(0_-)$ 和 $r'(0_-)$；
+  \item 求系统的单位冲激响应 $h(t)$；
+  \item 求系统的零输入响应 $r_{\mathrm{zi}}(t)$ 和零状态响应 $r_{\mathrm{zs}}(t)$。
+\end{enumerate}
+
+\subsection*{2.}
+
+某LTI连续时间系统的零极点分布为：极点 $p_1=-1$，$p_2=-4$；零点 $z_1=-2$。已知单位冲激响应的初值 $h(0_+)=1$。
+
+\begin{enumerate}[label=(\arabic*),leftmargin=*]
+  \item 求系统函数 $H(s)$，并判断系统是否稳定，说明理由；
+  \item 求系统的单位冲激响应 $h(t)$；
+  \item 画出系统的直接形式信号流图，并写出输入--输出微分方程；
+  \item 若激励 $e(t)=\mathrm{e}^{-2t}u(t)$，求零状态响应 $r_{\mathrm{zs}}(t)$。
+\end{enumerate}
+
+\subsection*{3.}
+
+如图所示的频分复用通信系统中，两路基带信号的频谱分别为
+\[
+E_1(\mathrm{j}\omega)=
+\begin{cases}
+1, & |\omega|<\omega_0,\\
+0, & \text{其他},
+\end{cases}
+\qquad
+E_2(\mathrm{j}\omega)=
+\begin{cases}
+\sqrt{1-\bigl(\dfrac{\omega}{\omega_0}\bigr)^2}, & |\omega|<\omega_0,\\[8pt]
+0, & \text{其他}.
+\end{cases}
+\]
+
+\begin{center}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tikzpicture}[
+  node distance=0.5cm and 1.0cm,
+  block/.style={rectangle,draw,minimum width=1.4cm,minimum height=0.7cm,font=\footnotesize,align=center},
+  sum/.style={circle,draw,inner sep=0pt,minimum size=0.55cm,font=\footnotesize},
+  dot/.style={circle,fill,inner sep=1pt},
+  lbl/.style={font=\footnotesize\color{gray}},
+]
+
+% === TRANSMITTER ===
+\node (e1) {$e_1(t)$};
+\node[sum,right=of e1] (mod1) {$\otimes$};
+\node[lbl,above=0.25cm of mod1] {$\cos\omega_1 t$};
+\node[sum,right=of mod1] (add) {$+$};
+\node[below=0.7cm of add] (e2) {$e_2(t)$};
+\node[right=of add] (e3) {$e_3(t)$};
+\node[sum,right=of e3] (mod2) {$\otimes$};
+\node[lbl,above=0.25cm of mod2] {$\cos\omega_2 t$};
+\node[right=of mod2] (e4) {$e_4(t)$};
+
+\draw[->] (e1) -- (mod1);
+\draw[->] (mod1) -- (add);
+\draw[->] (e2) -- (add);
+\draw[->] (add) -- (e3);
+\draw[->] (e3) -- (mod2);
+\draw[->] (mod2) -- (e4);
+
+% === RECEIVER (below transmitter) ===
+\node[sum,below=1.8cm of e4] (demod2) {$\otimes$};
+\node[lbl,above=0.25cm of demod2] {$\cos\omega_2 t$};
+\node[block,right=of demod2] (h1) {$H_1$\\[-2pt]\tiny 增益$2$, 截止$\omega_0\!+\!\omega_1$};
+\node[right=of h1] (e5) {$e_5(t)$};
+\node[dot,right=of e5] (split) {};
+
+\draw[->] (e4) -- (e4 |- demod2) -- (demod2);
+\draw[->] (demod2) -- (h1);
+\draw[->] (h1) -- (e5);
+\draw[->] (e5) -- (split);
+
+% Upper branch
+\node[block,above right=0.3cm and 0.8cm of split] (h3) {$H_3$\\[-2pt]\tiny 增益$1$};
+\node[sum,right=of h3] (mod3) {$\otimes$};
+\node[lbl,above=0.25cm of mod3] {$\cos\omega_1 t$};
+\node[block,right=of mod3] (h4) {$H_4$};
+\node[right=of h4] (out1) {$\frac12 e_1(t)$};
+
+\draw[->] (split) |- (h3);
+\draw[->] (h3) -- (mod3);
+\draw[->] (mod3) -- (h4);
+\draw[->] (h4) -- (out1);
+
+% Lower branch
+\node[block,below right=0.3cm and 0.8cm of split] (h2) {$H_2$\\[-2pt]\tiny 增益$1$};
+\node[right=of h2] (out2) {$e_2(t)$};
+
+\draw[->] (split) |- (h2);
+\draw[->] (h2) -- (out2);
+
+\end{tikzpicture}
+\end{adjustbox}
+\end{center}
+
+\vspace{0.2cm}
+
+发射端先用 $\cos(\omega_1 t)$ 调制 $e_1(t)$，再与 $e_2(t)$ 叠加得 $e_3(t)$，然后用 $\cos(\omega_2 t)$ 调制得 $e_4(t)$。接收端先用 $\cos(\omega_2 t)$ 解调，经理想低通滤波器 $H_1$（增益为2，截止频率为 $\omega_0+\omega_1$）得 $e_5(t)$。$e_5(t)$ 分两路：上路经 $H_3$（增益为1）、$\cos(\omega_1 t)$ 解调、$H_4$ 后得 $\frac12 e_1(t)$；下路经 $H_2$ 后得 $e_2(t)$。
+
+已知 $\omega_1>2\omega_0$，$\omega_2\gg\omega_1$。
+
+\begin{enumerate}[label=(\arabic*),leftmargin=*]
+  \item 画出 $e_3(t)$、$e_4(t)$、$e_5(t)$ 的频谱示意图，标注关键频率值；
+  \item 设计 $H_2(\mathrm{j}\omega)$、$H_3(\mathrm{j}\omega)$、$H_4(\mathrm{j}\omega)$ 的频率特性，画出特性曲线并标注关键参数；
+  \item 考虑叠加信号 $f(t)=\frac{1}{2}e_1(t)+e_2(t)$。画出其频谱图。若用间隔为 $T_{\!s}$ 的单位冲激序列对 $f(t)$ 进行理想抽样，为保证不失真（不产生频谱混叠），$T_{\!s}$ 的最大值是多少？画出抽样后信号 $f_{\!s}(t)$ 的频谱图。
+\end{enumerate}
+
+\subsection*{4.}
+
+某LTI离散时间系统，已知激励 $x[n]=u[n]$ 时的零状态响应为
+\[
+y[n]=\bigl(8-2\cdot0.5^{\,n}-0.25^{\,n}\bigr)\,u[n].
+\]
+
+\begin{enumerate}[label=(\arabic*),leftmargin=*]
+  \item 求系统函数 $H(z)$ 及零、极点，判断系统是否稳定；
+  \item 求单位样值响应 $h[n]$；
+  \item 画出 $|H(\mathrm{e}^{\mathrm{j}\Omega})|$ 的粗略图形，分析系统的频率特性（低通/高通/带通/带阻）；
+  \item 若输入 $x[n]=3\cos(n\pi)$，求系统的稳态输出 $y_{\mathrm{ss}}[n]$。
+\end{enumerate}
+
+\end{document}
