@@ -1,0 +1,82 @@
+{
+  ".github/workflows/trigger-workflow.yml": {
+    "size": 552,
+    "time": 1794023110,
+    "hash": "7e8e710077b9cd2d2f45bec096a69e0a03b1ccb2"
+  },
+  "LICENSE": {
+    "size": 20844,
+    "time": 1784384924,
+    "hash": "dcb0e5859dd1a10f468848eb8892d465b30e73ed"
+  },
+  "README.md": {
+    "size": 4001,
+    "time": 1784385940,
+    "hash": "cb51f19877a1c069d45d8489df221d27d186da6c"
+  },
+  "assignments/.gitkeep": {
+    "size": 0,
+    "time": 1784384924,
+    "hash": "dcb0e5859dd1a10f468848eb8892d465b30e73ed"
+  },
+  "exams/.gitkeep": {
+    "size": 0,
+    "time": 1784384924,
+    "hash": "dcb0e5859dd1a10f468848eb8892d465b30e73ed"
+  },
+  "exams/2023_aqua_期末答案.pdf": {
+    "size": 191154,
+    "time": 1784385940,
+    "hash": "cb51f19877a1c069d45d8489df221d27d186da6c"
+  },
+  "exams/2026春_aqua_期末回忆版.pdf": {
+    "size": 135624,
+    "time": 1784386923,
+    "hash": "96f8809ab69030f3fd86beff4e1c3cdf7be14e4d"
+  },
+  "exams/2026春_aqua_期末回忆版.tex": {
+    "size": 9431,
+    "time": 1784386923,
+    "hash": "96f8809ab69030f3fd86beff4e1c3cdf7be14e4d"
+  },
+  "labs/.gitkeep": {
+    "size": 0,
+    "time": 1784384924,
+    "hash": "dcb0e5859dd1a10f468848eb8892d465b30e73ed"
+  },
+  "notes/.gitkeep": {
+    "size": 0,
+    "time": 1784384924,
+    "hash": "dcb0e5859dd1a10f468848eb8892d465b30e73ed"
+  },
+  "notes/2026春_aqua_典型习题精编.pdf": {
+    "size": 314123,
+    "time": 1784386923,
+    "hash": "96f8809ab69030f3fd86beff4e1c3cdf7be14e4d"
+  },
+  "notes/2026春_aqua_典型习题精编.tex": {
+    "size": 37442,
+    "time": 1784386923,
+    "hash": "96f8809ab69030f3fd86beff4e1c3cdf7be14e4d"
+  },
+  "notes/2026春_aqua_笔记.pdf": {
+    "size": 332686,
+    "time": 1784385940,
+    "hash": "cb51f19877a1c069d45d8489df221d27d186da6c"
+  },
+  "notes/2026春_aqua_笔记.tex": {
+    "size": 52966,
+    "time": 1784385940,
+    "hash": "cb51f19877a1c069d45d8489df221d27d186da6c"
+  },
+  "readme.toml": {
+    "size": 4259,
+    "time": 1784385940,
+    "hash": "cb51f19877a1c069d45d8489df221d27d186da6c"
+  },
+  "slides/.gitkeep": {
+    "size": 0,
+    "time": 1784384924,
+    "hash": "dcb0e5859dd1a10f468848eb8892d465b30e73ed"
+  }
+}
